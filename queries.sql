@@ -7,14 +7,6 @@ AND date = 20180115
 -- transcript: Security footage shows that there were 2 witnesses. The first witness lives at the last house on "Northwestern Dr". The second witness, named Annabel, lives somewhere on "Franklin Ave".
 
 -- GOAL: Identify witness on Northwestern Dr.
--- NOTE: Unsure whether "last" refers to lowest number or highest number.
-SELECT name
-FROM person
-WHERE address_street_name LIKE "Northwestern Dr"
-ORDER BY address_number
-LIMIT 1 
--- name: Kinsey Erickson
-
 SELECT name
 FROM person
 WHERE address_street_name LIKE "Northwestern Dr"

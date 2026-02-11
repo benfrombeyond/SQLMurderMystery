@@ -3,7 +3,7 @@
 ## What this is
 I solved the Knight Lab “SQL Murder Mystery” by querying an unfamiliar relational database.
 
-## What I practiced
+## Skills demonstrated
 - Multi-table joins across normalized schema
 - Filtering from natural-language requirements
 - Iterative narrowing of candidate sets

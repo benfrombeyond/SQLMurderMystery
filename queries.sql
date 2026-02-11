@@ -50,8 +50,8 @@ SELECT name, check_in_time, check_out_time
 FROM get_fit_now_check_in JOIN get_fit_now_member
 ON membership_id = id
 WHERE check_in_date = 20180109
-AND name LIKE "Annabel Miller"
-OR name LIKE "Jeremy Bowers"
+AND (name LIKE "Annabel Miller"
+OR name LIKE "Jeremy Bowers")
 -- Jeremy Bowers: 1530 - 1700
 -- Annabel Miller: 1600 - 1700
 

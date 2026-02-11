@@ -4,10 +4,10 @@
 I solved the Knight Lab “SQL Murder Mystery” by querying an unfamiliar relational database.
 
 ## What I practiced
-- Exploring an unknown schema
-- Filtering and joining across tables to connect entities
-- Iterative hypothesis testing
-- Validating assumptions (row counts, uniqueness, join behavior)
+- Multi-table joins across normalized schema
+- Filtering from natural-language requirements
+- Iterative narrowing of candidate sets
+- Logical validation / avoiding join-grain mistakes
 
 ## Approach (high level)
 1. Started from the reported crime details (date/location).

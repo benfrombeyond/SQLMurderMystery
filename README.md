@@ -1,4 +1,4 @@
-# SQL Murder Mystery — Investigation Writeup
+# SQL Murder Mystery
 
 ## What this is
 I solved the Knight Lab “SQL Murder Mystery” by querying an unfamiliar relational database.

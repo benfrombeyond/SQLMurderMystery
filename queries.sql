@@ -25,9 +25,9 @@ AND name LIKE "Annabel%"
 SELECT name, transcript
 FROM interview join person
 ON person_id = id
-WHERE name LIKE "Kinsey Erickson"
-OR name LIKE "Morty Schapiro"
-OR name LIKE "Annabel Miller"
+WHERE name = "Kinsey Erickson"
+OR name = "Morty Schapiro"
+OR name = "Annabel Miller"
 -- Morty Schapiro: I heard a gunshot and then saw a man run out. He had a "Get Fit Now Gym" bag. The membership number on the bag started with "48Z". Only gold members have those bags. The man got into a car with a plate that included "H42W".
 -- Annabel Miller: I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
 
@@ -42,7 +42,7 @@ WHERE plate_number LIKE "%H42W%"
 SELECT name
 FROM get_fit_now_member
 WHERE id LIKE "48Z%"
-AND membership_status LIKE "gold"
+AND membership_status = "gold"
 -- names: Joe Germuska, Jeremy Bowers
 
 -- GOAL: Confirm that Jeremy Bowers was at the gym at the same time as Annabel Miller on January 9th.
@@ -50,8 +50,8 @@ SELECT name, check_in_time, check_out_time
 FROM get_fit_now_check_in JOIN get_fit_now_member
 ON membership_id = id
 WHERE check_in_date = 20180109
-AND (name LIKE "Annabel Miller"
-OR name LIKE "Jeremy Bowers")
+AND (name = "Annabel Miller"
+OR name = "Jeremy Bowers")
 -- Jeremy Bowers: 1530 - 1700
 -- Annabel Miller: 1600 - 1700
 
@@ -59,7 +59,7 @@ OR name LIKE "Jeremy Bowers")
 SELECT name, transcript
 FROM interview JOIN person
 ON person_id = id
-WHERE name LIKE "Jeremy Bowers"
+WHERE name = "Jeremy Bowers"
 -- transcript: I was hired by a woman with a lot of money. I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). She has red hair and she drives a Tesla Model S. I know that she attended the SQL Symphony Concert 3 times in December 2017.
 
 -- GOAL: Identify the woman based on hair color, height, car, and attendance at SQL Symphony Concert.
@@ -69,18 +69,18 @@ ON person.license_id = drivers_license.id
 JOIN facebook_event_checkin
 ON facebook_event_checkin.person_id = person.id
 WHERE height BETWEEN 64 AND 68
-AND hair_color LIKE "red"
-AND car_make LIKE "Tesla"
-AND car_model LIKE "Model S"
-AND date LIKE "201712%"
-AND event_name LIKE "SQL Symphony Concert"
+AND hair_color = "red"
+AND car_make = "Tesla"
+AND car_model = "Model S"
+AND date = "201712%"
+AND event_name = "SQL Symphony Concert"
 -- 3 entries for Miranda Priestly
 
 -- GOAL: Retrieve interview with Miranda Priestly
 SELECT name, transcript
 FROM interview JOIN person
 ON person_id = id
-WHERE name LIKE "Miranda Priestly"
+WHERE name = "Miranda Priestly"
 -- No data returned.
 
 -- Confirm Jeremy Bowers as the killer.
